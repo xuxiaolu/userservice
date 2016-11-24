@@ -3,9 +3,9 @@ package com.xuxl.user.service.domain;
 import java.io.Serializable;
 import java.util.Date;
 
-import com.xuxl.common.annotation.Description;
+import com.xuxl.common.annotation.http.api.Description;
 
-@Description(value = "用户")
+@Description("用户")
 public class User implements Serializable {
 
 	/**
@@ -13,10 +13,13 @@ public class User implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	@Description("名字")
 	private String name;
 	
+	@Description("年龄")
 	private int age;
 	
+	@Description("生日")
 	private Date birthday;
 
 	public String getName() {
